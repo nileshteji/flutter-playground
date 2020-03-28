@@ -8,25 +8,30 @@ void main(List<String> args) {
 class Application extends StatelessWidget{
   List<String> nilesh;
   int counter=0;
+  void question(){
+    print("Answer Chosen");
+  }
 
   Application({this.nilesh});
  
  
-
+  
 
   @override
   Widget build(BuildContext context) {
   return MaterialApp(
   home: Scaffold(
     appBar: AppBar(title:Text("Quiz Game"),backgroundColor:Colors.black),
-     body:Column(children: <Widget>[
+     body:ListView(children: <Widget>[
     
-       //AppBar(title:Text("Quiz Game",),backgroundColor: Colors.black,),
-           Row(children:<Widget>[]),
-           
-       RaisedButton(child:Text("Teji"))
+      RaisedButton(onPressed: () => print("Answer"),child:Text("Nilesh")),
        
-       ], 
+       
+       
+       
+       
+       ]
+     ), 
       
        )
 
@@ -36,8 +41,8 @@ class Application extends StatelessWidget{
 
       
     
-  )
-);
+  );
+
   }
 
 }
